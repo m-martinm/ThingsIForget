@@ -1,4 +1,8 @@
-# NVIM Commands
+## Installing NVIM
+simply place the init.lua at the right directory
+if it complains about the markdown plugin go to nvim-data folder find the modules /app folder and node install
+
+## NVIM Commands
 
 Replace the first foo with bar
 ```bash

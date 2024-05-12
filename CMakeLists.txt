@@ -1,3 +1,7 @@
+# mkdir build
+# cd build
+# cmake -S .. -B . -G "MinGW Makefiles"
+# you can change MinGW Makefiles to Unix Makefiles or Ninja or VisualStudio or whatever
 cmake_minimum_required(VERSION 3.16)
 project(Example_name)
 
@@ -10,7 +14,9 @@ set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS True)
 # Add the main executable
-add_executable(${PROJECT_NAME} path/to/main.c.cpp)
+
+file(GLOB_RECURSE SOURCE_FILES "${CMAKE_SOURCE_DIR}/src/*.cpp")
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 if(WIN32)
     set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".exe")
@@ -31,6 +37,6 @@ set(HEADER_DIRS path/to/one/dir path/to/other/dir)
 include_directories(${HEADER_DIRS})
 
 # Add subdirectory to find libraries for example
-add_subdirectory(path/to/dir)
+add_subdirectory(path/to/dir) # if there is another cmake file there it will execute it
 target_link_libraries(${PROJECT_NAME} PRIVATE example_library_name)  # Link the test with ModuleA
-
+add_library(MyLibrary STATIC mylib.cpp) # Adds a library from source files

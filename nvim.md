@@ -31,3 +31,10 @@ Search files
 ```
 <leader>sf
 ```
+
+## C dev
+
+Adding a compile_commands.json with cmake
+```bash
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1
+```

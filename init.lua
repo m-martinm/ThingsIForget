@@ -1,10 +1,10 @@
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.wo.relativenumber = false
+vim.cmd('set noshowmode')
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
@@ -111,7 +111,7 @@ require('lazy').setup({
     'folke/tokyonight.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'tokyonight-storm'
+      -- vim.cmd.colorscheme 'tokyonight-storm' -- NOTE: it is set at the end of the script
     end,
   },
 
@@ -574,4 +574,4 @@ function AddLatexTemplateReport(new_filename)
 end
 
 vim.cmd("command! -nargs=1 AddLatexTemplateReport lua AddLatexTemplateReport(<f-args>)")
-im.g.python3_host_prog = "D:/Program Files/Anaconda/python.exe"
+vm.g.python3_host_prog = "D:/Program Files/Anaconda/python.exe"

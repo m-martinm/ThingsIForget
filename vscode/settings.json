@@ -1,0 +1,27 @@
+{
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "Cascadia Mono",
+    "editor.find.seedSearchStringFromSelection": "selection",
+    "workbench.colorTheme": "Correia Gruvbox Theme",
+    "workbench.sideBar.location": "right",
+    "workbench.editor.restoreViewState": false,
+    "files.hotExit": "off",
+    "window.restoreWindows": "none",
+    "chat.commandCenter.enabled": false,
+    "chat.detectParticipant.enabled": false,
+    "chat.experimental.statusIndicator.enabled": false,
+    "terminal.integrated.enablePersistentSessions": false,
+    "autopep8.args": [
+        "--max-line-length",
+        "120",
+        "--experimental"
+    ],
+    "ruff.lineLength": 120,
+    "hexeditor.columnWidth": 32,
+    "hexeditor.showDecodedText": true,
+    "hexeditor.defaultEndianness": "little",
+    "hexeditor.inspectorType": "aside",
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    }
+}
